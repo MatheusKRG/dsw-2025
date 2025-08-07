@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Pagina Inicial</h1>
+    <p>Bem vindo Porra<br><br>
+        <a href="{{ url_for('login') }}">Fazer login</a> 
+        <br>
+        ou 
+        <br>
+        <a href="{{ url_for('logout') }}">Fazer logout</a></p>
+{% endblock  %}
