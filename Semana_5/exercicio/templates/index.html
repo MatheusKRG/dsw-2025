@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bem-vindo ao Livro de Receitas!</h1>
+    <p>Utilize o menu ou o botão abaixo para cadastrar uma nova receita.</p>
+    <a href="{{ url_for('nova_receita') }}" class="btn-nova-receita">Nova Receita</a>
+{% endblock %}

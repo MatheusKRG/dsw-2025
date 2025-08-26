@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Receita Criada</h1>
+  <p><strong>Nome:</strong> {{ nome }}</p>
+  <p><strong>Ingredientes:</strong></p>
+  <p>{{ ingredientes|replace('\n', '<br>')|safe }}</p>
+  <p><strong>Modo de Preparo:</strong></p>
+  <p>{{ modo_preparo|replace('\n', '<br>')|safe }}</p>
+  <form action="{{ url_for('index') }}" method="get">
+    <input type="submit" value="Voltar à página inicial" class="btn-voltar">
+  </form>
+  <form action="{{ url_for('nova_receita') }}" method="get">
+    <input type="submit" value="Criar nova receita" class="btn-voltar">
+  </form>
+{% endblock %}
